@@ -57,7 +57,7 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
     () => ({
       locale,
       setLocale,
-      toggleLocale: () => setLocale((current) => (current === "en" ? "fr" : "en")),
+      toggleLocale: () => setLocale(locale === "en" ? "fr" : "en"),
     }),
     [locale],
   );
